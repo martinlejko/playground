@@ -6,12 +6,18 @@
 #define CALCULATOR_CALCULATOR_H
 #include <string>
 #include <unordered_map>
-class Calculator {
-public:
-    std::unordered_map<std::string,int> expressions;
-    void calculate(std::string expression, std::string type);
+#include "treenode.h"
+#include <stack>
+#include <map>
 
+class Calculator {
 private:
-    void postfix(std::string expression);
+    std::map<std::string, int> expressions;
+    std::unique_ptr<TreeNode> buildExpressionTree(std::stack<std::string>& tokens);
+    int evaluateExpressionTree(const std::unique_ptr<TreeNode>& root);
+
+public:
+    void calculate(std::string &expression, const std::string& type);
+    void printResults();
 };
 #endif //CALCULATOR_CALCULATOR_H

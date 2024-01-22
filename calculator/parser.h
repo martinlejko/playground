@@ -9,9 +9,9 @@
 
 class Parser {
 public:
-    bool isFileValid(std::string fileName);
-    std::vector<std::string> parse(std::string fileName);
+    static bool isFileValid(std::string &fileName);
+    static std::vector<std::string> parse(std::string &fileName);
 private:
-    bool isCorrectVariable(std::string &variable);
+    static bool isCorrectVariable(std::string &variable);
 };
 #endif //CALCULATOR_PARSER_H

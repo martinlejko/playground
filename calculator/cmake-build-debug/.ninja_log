@@ -1,6 +1,7 @@
 # ninja log v5
-702	734	1702235558691141663	calculator	34158af5753dc9ea
+1523	1599	1702242889968644713	calculator	540fa56002b13d51
+2	421	1702242436985661354	CMakeFiles/calculator.dir/main.cpp.o	6dfacecd9b5e1ca2
+0	49	1704909953416048281	build.ninja	a4297fd0d1811fc
 3	822	1702232386085232245	CMakeFiles/calculator.dir/inputParser.cpp.o	60ccc264175ed6e1
-2	702	1702235558657157349	CMakeFiles/calculator.dir/parser.cpp.o	8dcdefc8c3f99030
-2	681	1702235093436772684	CMakeFiles/calculator.dir/main.cpp.o	6dfacecd9b5e1ca2
-0	49	1702235993675931297	build.ninja	a4297fd0d1811fc
+6	776	1702242223658557466	CMakeFiles/calculator.dir/parser.cpp.o	8dcdefc8c3f99030
+3	1522	1702242889888939334	CMakeFiles/calculator.dir/calculator.cpp.o	eb9d56ba4f7286c6

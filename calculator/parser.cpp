@@ -6,29 +6,29 @@
 #include <fstream>
 #include <sstream>
 
-bool Parser::isFileValid(std::string fileName) {
+bool Parser::isFileValid(std::string &fileName) {
     std::ifstream file(fileName);
 
     if (!file.is_open()) {
-        std::cout << "Error: File could not be opened." << std::endl;
-        return false;
+        std::cout << "parse error" << std::endl;
+        exit(0);
     }
 
     if (file.peek() == std::ifstream::traits_type::eof()) {
-        std::cout << "Error: File is empty." << std::endl;
-        return false;
+        std::cout << "parse error" << std::endl;
+        exit(0);
     }
     return true;
 }
 
-std::vector<std::string> Parser::parse(std::string fileName) {
+std::vector<std::string> Parser::parse(std::string &fileName) {
     std::vector<std::string> lines;
     std::ifstream file(fileName);
     std::string line;
     while (std::getline(file, line)) {
 
         if (line.find("=") == std::string::npos) {
-            std::cout << "Error: No equals sign." << std::endl;
+            std::cout << "parse error" << std::endl;
             exit(0);
         }
 
@@ -37,7 +37,7 @@ std::vector<std::string> Parser::parse(std::string fileName) {
         iss >> variable;
         //Also substr can be used like this: variable.substr(0, variable.find("="))
         if (!isCorrectVariable(variable)) {
-            std::cout << "Error: Invalid variable name." << std::endl;
+            std::cout << "parse error" << std::endl;
             exit(0);
         }
         lines.push_back(line);

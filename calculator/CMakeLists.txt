@@ -8,4 +8,5 @@ add_executable(calculator main.cpp
         parser.cpp
         calculator.h
         calculator.cpp
+        treenode.h
 )
