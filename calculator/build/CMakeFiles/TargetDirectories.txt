@@ -1,3 +1,0 @@
-/Users/martinlejko/Desktop/github/playground/calculator/build/CMakeFiles/calculator.dir
-/Users/martinlejko/Desktop/github/playground/calculator/build/CMakeFiles/edit_cache.dir
-/Users/martinlejko/Desktop/github/playground/calculator/build/CMakeFiles/rebuild_cache.dir
